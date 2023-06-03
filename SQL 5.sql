@@ -64,7 +64,7 @@ WHERE TIMESTAMPDIFF(YEAR, birthday, NOW()) < 20
 GROUP BY u.id
 ;
 
-#Получить друзей пользователя с id=1
+#Получить друзей пользователя с id=1 (с помощью представления "друзья")
 CREATE VIEW druzya AS
 SELECT from_user_id AS 'id', 
 	(SELECT CONCAT(firstname,' ', lastname) 
